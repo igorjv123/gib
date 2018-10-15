@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+
 import logo from './logo.svg';
 import TextInput from './components/text-input'
+import ButtonInput from './components/button-input'
 import './App.css';
 
 class App extends Component {
   handleChange(e){
     console.log(e.target.value, e.target.name)
+  }
+  handleSubmit(e){
+    console.log(e)
   }
   render() {
     return (
@@ -22,6 +27,7 @@ class App extends Component {
               onChange={this.handleChange}
               placeholder={'Link to the repo... '}
             />
+            <ButtonInput name='qqq' onClick={this.handleSubmit} text={'Search'}/>
         </header>
       </div>
     );
