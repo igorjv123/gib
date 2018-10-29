@@ -1,0 +1,15 @@
+.tab-bar{
+    margin: 10px auto 0 auto;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+.tab-bar .tab-item{
+    background-color: #66b3ff;
+}
+.tab-bar .tab-item::selection{
+    background-color: aqua;
+}

@@ -3,10 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "moment": "^2.22.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
     "react-scripts": "2.0.5",
-    "semantic-ui-react": "^0.82.5"
+    "redux": "^4.0.1",
+    "redux-devtools": "^3.4.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-promise-middleware": "^5.1.1",
+    "styled-components": "^4.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
