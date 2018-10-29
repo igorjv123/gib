@@ -1,5 +1,4 @@
 import React from 'react';
-import promiseMiddleware from 'redux-promise-middleware'
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from "react-redux";
@@ -8,10 +7,10 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import initialState from './logic/defaultState';
 import reducer from './logic/reducer'
-import { composeWithDevTools } from "redux-devtools-extension";
+import promise from 'redux-promise-middleware';
 
-const store = createStore(reducer,initialState);
-
+const middleware = {...applyMiddleware(promise()), ...initialState}
+const store = createStore(reducer, middleware);
     ReactDOM.render(
     <Provider store={store}>
         <App />

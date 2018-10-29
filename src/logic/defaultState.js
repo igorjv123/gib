@@ -1,7 +1,11 @@
 
 const initialState ={
-    tabs:[false,false,false],
-    link:'http',
+    tabs: {
+        index: 0
+    },
+    search: {
+        link:''
+    }
 
 }
 export default initialState;

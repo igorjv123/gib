@@ -2,7 +2,7 @@ import {
     TAB_CHANGE
 } from './actionType';
 
-export const tabChange = (data) => ({
+export const tabChange = (index) => ({
     type: TAB_CHANGE,
-    payload: data
+    payload: index
 });

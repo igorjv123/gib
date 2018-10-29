@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import React, { Component } from 'react';
 const TextInput = styled.input`
    font-size:16px;
    color:#00000f;

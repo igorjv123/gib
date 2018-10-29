@@ -6,9 +6,7 @@ import { mapStateToProps, mapDispatchToProps } from "./container";
 
 class TabsBar extends React.Component{
     handleTabClick(e){
-        var temp = [false,false,false]
-        temp[e.target.name] = true
-        this.props.onTabChange(temp)
+        this.props.onTabChange(parseInt(e.target.name))
     }
     render(){
         console.log(this.props)
@@ -16,7 +14,7 @@ class TabsBar extends React.Component{
         <div className='tab-bar'>
             <Tab
                 name = {0}
-                // active={this.props.tabs[0]}
+                active={this.props.index === 0}
                 onClick = {this.handleTabClick.bind(this)}
             >
             Main
@@ -24,7 +22,7 @@ class TabsBar extends React.Component{
 
             <Tab
                 name = {1}
-                // active={this.props.tabs[1]}
+                active={this.props.index === 1}
                 onClick = {this.handleTabClick.bind(this)}
             >
             Graphics
@@ -32,8 +30,7 @@ class TabsBar extends React.Component{
 
             <Tab
                 name = {2}
-                
-                // active={this.props.tabs[2]}
+                active={this.props.index === 2}
                 onClick = {this.handleTabClick.bind(this)}
             >
             Add

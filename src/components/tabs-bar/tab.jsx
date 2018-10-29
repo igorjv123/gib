@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import React, { Component } from 'react';
 const Tab = styled.button`
     background: ${(props)=>props.active?'#fff':'#ccc'};
     border-radius: 3px 3px 0 0 ;

@@ -5,8 +5,7 @@ import {TAB_CHANGE} from './actionType';
 function tabReducer(state = initialState, action) {
     switch (action.type) {
         case TAB_CHANGE:
-            console.log(action)
-            return { ...state, tabs: action.payload };
+            return { ...state, index: action.payload };
         default:
             return state;
     }
