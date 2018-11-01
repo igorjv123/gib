@@ -14,15 +14,8 @@ class Header extends React.Component{
     }
     handleSubmit = async(e)=>{
         this.props.searchClick(this.props.link)
-        const data = await this.getData(this.props.link)
-        this.setState({data:data}, ()=> console.log(this.state))
+       
     }
-    getData = async(url) => {
-        let api_call = await fetch(url);
-        const data = await api_call.json()
-        return data
-      }
-     
     render(){
         return(
             <div className="App-input">

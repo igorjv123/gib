@@ -7,10 +7,17 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import initialState from './logic/defaultState';
 import reducer from './logic/reducer'
-import promise from 'redux-promise-middleware';
+import createSagaMidddelware from "redux-saga";
+import rootSaga from "./logic/rootSaga";
 
-const middleware = {...applyMiddleware(promise()), ...initialState}
-const store = createStore(reducer, middleware);
+const sagaMiddelware = createSagaMidddelware();
+const middleware = [sagaMiddelware];
+const store = createStore(
+    reducer,
+    initialState,
+    applyMiddleware(...middleware)
+);
+sagaMiddelware.run(rootSaga);
     ReactDOM.render(
     <Provider store={store}>
         <App />

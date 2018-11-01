@@ -1,12 +1,13 @@
 import {
-    LINK_CHANGE
+    LINK_INPUT,
+    FETCH_DATA
 } from './actionType';
 
 export const searchSubmit = (link) => ({
-    type: LINK_CHANGE,
+    type: FETCH_DATA,
     payload: link
 });
-export const changeLink = (link) => ({
-    type: LINK_CHANGE,
+export const linkInput = (link) => ({
+    type: LINK_INPUT,
     payload: link
 })

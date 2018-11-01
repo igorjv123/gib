@@ -5,6 +5,9 @@ const initialState ={
     },
     search: {
         link:''
+    },
+    data:{
+        mainInfo:null
     }
 
 }

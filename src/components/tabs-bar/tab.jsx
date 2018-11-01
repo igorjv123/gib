@@ -11,7 +11,7 @@ const Tab = styled.button`
     padding: 8px;
     cursor:pointer;
     :hover {
-        color: #fff;
+        color: #000;
         border-color: #fff;
       }
     :active{

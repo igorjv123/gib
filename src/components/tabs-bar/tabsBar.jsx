@@ -9,8 +9,7 @@ class TabsBar extends React.Component{
         this.props.onTabChange(parseInt(e.target.name))
     }
     render(){
-        console.log(this.props)
-        return(
+    return(
         <div className='tab-bar'>
             <Tab
                 name = {0}
